@@ -1,19 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage('Build') { 
-            steps { 
-                sh 'echo 1' 
+        stage('Build') {
+            steps {
+                sh 'cowsay -f tux If you build it they will come'
             }
         }
         stage('Test'){
             steps {
-                sh 'echo 2'
+                sh 'cowsay -f dragon You shall not pass'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'echo 3'
+                sh 'cowsay -f turtle Ship to production!'
             }
         }
     }
